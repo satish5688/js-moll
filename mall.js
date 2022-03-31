@@ -128,7 +128,7 @@ function payBill(bill){
     else if (bill>2000 && bill<5000){
         percent=19
         discount=(bill*percent)/100}
-    else if (bill<5000){
+    else if (bill>5000){
         percent=23
         discount=(bill*percent)/100}
     discountn_bill=bill-discount
@@ -136,7 +136,7 @@ function payBill(bill){
     while (true){
         pay=parseInt(input.question('Pay amount :'))
         if (pay==discountn_bill){
-            console.log();('Ok Done! Thank you..')
+            console.log('Ok Done! Thank you..')
             go=parseInt(input.question('press 1 to Exit :' ))
             if (go==1){
                     quit++}
